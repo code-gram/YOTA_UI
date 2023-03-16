@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color:#f0f3f6;
+}
+
+
+
+h1{
+    color: white;
+    text-align: center;
+}
+.fa-solid{
+    width: 25px;
+}
+/* ul li:hover a{
+    background-color: #88b4ba;
+} */
+
+.fa-bars{
+    padding-left: 80px;
+}
+
+.margin1{
+    margin:1rem !important;
+}
+
+.mynavbar{
+    margin: 0rem 0rem 0rem 0.5rem !important;
+}
+.dashboard{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+/* new */
+
+
+.dashboard{
+    margin: 10px 0px 10px 0px;
+    
+}
+.card-row{
+    padding: 20px 0px 0px 0px;
+}
+.card-row1{
+    padding: 20px 0px 50px 0px;
+}
+.back{
+   background-color:  #ecf0f5;
+   padding-left:0px;
+}
+.profile{
+    float: right;
+}
+
+.header-left{
+    font-size: 20px;
+    color: white;
+    
+   
+    background: #144358 ;
+    user-select: none;
+    text-transform: uppercase;
+   
+    font-weight: bold;
+    border-bottom: solid #f0f3f6;
+}
+.row-head{
+    padding-top: 15px;
+    
+}
+.icon-head{
+    padding-right: 15px;
+    padding-top: 5px;
+    float: right;
+    padding-left: 35px;
+   
+}
+.menu-container{
+    padding: 0px 0px 0px 0px;
+}
+
+.menu-container li{
+    list-style: none;
+    padding: 15px 15px 15px 15px;
+}
+li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    /* border-top: 3px solid rgba(255, 255, 255, .1); */
+}
+.menu-container li:hover {
+    background-color: #88b4ba;
+}
+.menu-container li a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.headeruserName {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #144358;
+}
+.headeruserRole{
+    
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    
+}
+.nameDesign {
+    float: left;
+    line-height: 20px;
+    
+}
+.ul-card li{
+padding-left: 15px;
+list-style: none;
+}
+.ul-b li{
+    list-style: none; 
+    display: inline-block;
+    vertical-align: top;
+    
+}
+.ul-b{
+    padding-left: 10px;
+    border-left: 1px solid black ;
+}
+.yash-image{
+   padding-top:0px;
+   
+}
+.yash-image img{
+    margin-top: -15px;
+}
+.card{
+    box-shadow: 2px 2px 5px -2px #717171;
+}
+.box-title {
+    font-size: 17px;
+    font-weight: 400;
+}
+.gap{
+    
+    padding-bottom: 5px;
+}
+@media only screen and(max-width: 576px){
+    
+        }
+
+   @media only screen and (max-width: 992px){
+    .sam{
+        width:100%;
+        /* height:58px; */
+    }
+    /* .sam .icon-head{
+        display:none
+    }
+    .sam li{
+        display:none;
+    } */
+   }
+   /* @media only screen and (max-width: 750px) {
+
+    #sidebar {
+        float: none;
+    }
+
+    #sidebar .ul {
+        display: i;
+    }
+
+} */
+
+
+/* sidebar  */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* create batch input type border */
+
+#BatchName{
+    border-radius: 20vh;
+    
+}
+#BatchIdentifier{
+    border-radius: 20vh;
+}
+ #StartDate{
+    border-radius: 20vh;
+ } 
+ #EndDate{
+    border-radius: 20vh;
+ }
+ 
+ .add_btn{
+    background: #88b4ba;
+    color: white;
+    width: 15%;
+    height: 35px;   
+    border-radius: 20px;
+    border-color:#88b4ba ;
+    border-style:hidden;
+    
+    
+   
+ }
