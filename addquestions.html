@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Question</title>
+
+  <!-- #### -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- #### -->
+
+  <link rel="stylesheet" type="text/css" href="syt.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-2 col-lg-2 sam" style="padding: 0px 0px; background-color: #144358">
+        <div class="container header-left" style="height: 60px">
+          <div class="row row-head">
+            <p style="padding-left: 10px">YOTA App</p>
+            <i class="fa-solid fa-bars icon-head"></i>
+          </div>
+        </div>
+
+        <ul class="menu-container">
+          <li>
+            <a href="index.html"><i class="fa-solid fa-gauge-high"></i>Dashboard</a>
+          </li>
+          <li>
+            <a href="createbatch.html"><i class="fa-solid fa-list"></i>Batch Management</a>
+          </li>
+          <!-- Default dropright button -->
+          <li class="btn-group dropright">
+            <span onmouseover="this.style.backgroundColor='#88b4ba'" onmouseleave="this.style.backgroundColor='#144358'"
+              type="dropdown" class="btn btn-primary dropdown-toggle"
+              style="background-color: #144358; margin-left: -9%; font-size: 13px; border: none;" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"><i class="fa-sharp fa-solid fa-file-circle-question"></i>
+              Question Management
+            </span>
+            <div class="dropdown-menu"
+              style="background-color: #88b4ba; height: 1000%; margin-top:0%; margin-top: -55%; width: 95%; margin-left: 14px;">
+              <!-- Dropdown menu links -->
+
+              <a class="dropdown-item" href="addquestions.html" style="color: white; background: #88b4ba;">Create
+                Question</a>
+              <br>
+              <a class="dropdown-item" href="listquestion.html" style="color: white; background: #88b4ba;">Questions
+                List</a>
+            </div>
+          </li>
+          <li>
+            <a href="AddTechnology.html" style="font-size: 12px"><i class="fa-solid fa-laptop"></i>Technology
+              Management</a>
+          </li>
+          <li>
+            <a href="AddAssociates.html"><i class="fa-solid fa-users"></i>Associate Management</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i>Reports</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xl-10 col-lg-10" style="padding: 0px 0px">
+        <!--navbar-->
+        <nav class="navbar navbar-light bg-light" style="height: 60px">
+          <a class="navbar-brand yash-image"><img src="Images/yashlogo.png" alt="yash-logo" /></a>
+
+          <ul class="ul-b">
+            <li>
+              <span class="nameDesign">
+                <span class="headeruserName">Pankaj Sharma</span>
+                <span class="headeruserRole">Role_User</span>
+              </span>
+            </li>
+            <li>
+              <img class="img-role" src="Images/user.png" />
+            </li>
+          </ul>
+        </nav>
+
+        <!--dashbord-->
+        <div class="container-fluid">
+          <div class="row back">
+            <div class="dash-row col">
+              <h4 class="dashboard" style="color: #144358">Question Management</h4>
+            </div>
+          </div>
+
+        </div>
+
+        <!--3 card-->
+        <div class="container-fluid">
+          <div class="row justify-content-around back card-row1">
+            <div class="col-lg-11">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div class="row">
+                    <h5 class="card-title col-6"><b>Create Question</b></h5>
+                    <div class="col-3">
+                      <button type="submit"
+                        style="right: 0%; margin-left: 130%; margin-top: 0%; background-color: #144358; border-radius: 15px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);"
+                        class="btn btn-primary btn btn-info  button2">Save</button>
+                    </div>
+                    <div class="col-3">
+                      <button type="cancel"
+                        style="background-color: #a7aaab;color: white; border-radius: 10px; margin-left: 50%;"
+                        class="btn btn-default  button3 ">Cancel</button>
+                    </div>
+                  </div>
+
+                  <hr />
+                  <div>
+                    <ul class="ul-card">
+                      <!-- Login form creation starts-->
+                      <section class="container-fluid col-lg-11">
+                        <!-- row and justify-content-center class is used to place the form in center -->
+                        <section class="row justify-content-center" style="margin-right: 240px;">
+                          <section class="col-lg-11">
+                            <form class="form-container col-lg-11" style="margin-top: 20px;">
+                              <div class="form-group col-6">
+                                <label for="InputQuestion"
+                                  style="margin-top: 0%; margin-right: 0%;"><b>Question</b></label>
+                                <input type="text" style="width: 480px; height: 50px; border-radius: 10px;"
+                                  class="form-control" id="text" aria-describeby="emailHelp"
+                                  placeholder="Enter question?">
+                              </div>
+                              <div class="answer">
+                                <div class="answer_heading" style="margin-left: 18px">
+                                  <label for="InputPassword1"><b>Options</b></label>
+                                  <div class="row align-items-end">
+
+                                    <div class="col-6" style="display: flex;">
+
+                                      <span class="" style="margin-top: 5px; padding-right: 10px;">A</span>
+
+                                      <input class="showCorrect mc_forminput" type="checkbox" name="correct1" value="1"
+                                        id="a1" style="margin-bottom: 20px; display:inline-block ">
+                                      <input type="text"
+                                        style="margin-left: 5px; margin-bottom: 20px; border-radius: 10px;display:inline-block ;"
+                                        class="form-control" id="text" aria-describeby="emailHelp">
+                                    </div>
+                                    <div class="col-6" style="display: flex;">
+                                      <span class="" style="margin-top: 5px; padding-right: 10px;">B</span>
+                                      <input class="showCorrect mc_forminput" type="checkbox" name="correct1" value="1"
+                                        id="a1" style="margin-bottom: 20px;">
+                                      <input type="text "
+                                        style="margin-left: 5px; margin-bottom: 20px; border-radius: 10px;"
+                                        class="form-control" id="text" aria-describeby="emailHelp">
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-6" style="display: flex;">
+                                      <span class="" style="margin-top: 5px; padding-right: 10px;">C</span>
+                                      <input class="showCorrect mc_forminput" type="checkbox" name="correct1" value="1"
+                                        id="a1">
+                                      <input type="text" style="margin-left: 5px; border-radius: 10px;"
+                                        class="form-control" id="text" aria-describeby="emailHelp">
+                                    </div>
+                                    <div class="col-6" style="display: flex;">
+                                      <span class="" style="margin-top: 5px; padding-right: 10px;">D</span>
+                                      <input class="showCorrect mc_forminput" type="checkbox" name="correct1" value="1"
+                                        id="a1">
+                                      <input type="text" style="margin-left: 5px; border-radius: 10px;"
+                                        class="form-control" id="text" aria-describeby="emailHelp">
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </form>
+                          </section>
+                        </section>
+                      </section>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!---->
+          <!--footer-->
+          <footer class="bg-light text-center text-lg-start mt-4">
+            <div class="row justify-content-center text-center p-3"
+              style="background-color: rgba(204, 204, 204, 0.53); padding: 20px 0px; text-align: center;">
+              Yash Technologies Powered YOTA &copy; 2023.
+            </div>
+          </footer>
+          <!-- Footer End -->
+        </div>
+      </div>
+    </div>
+
+
+
+</body>
+
+</html>
