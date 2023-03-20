@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>List of associates</title>
+  <link rel="stylesheet" type="text/css" href="ListAssociates.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-2 col-lg-2 sam" style="padding: 0px 0px; background-color: #144358">
+        <div class="container header-left" style="height: 60px">
+          <div class="row row-head">
+            <p style="padding:0px 0px 0px 10px;width:109.27px">YOTA App</p>
+            <i class="fa-solid fa-bars icon-head" style="width:50px"></i>
+          </div>
+        </div>
+
+        <ul class="menu-container">
+          <li>
+            <a href="index.html"><i class="fa-solid fa-gauge-high"></i>Dashboard</a>
+          </li>
+          <li>
+            <a href="createbatch.html"><i class="fa-solid fa-list"></i>Batch Management</a>
+          </li>
+          <li>
+            <a href="addquestions.html"><i class="fa-solid fa-file-circle-question"></i>Question Management</a>
+          </li>
+          <li>
+            <a href="AddTechnology.html" style="font-size: 12px"><i class="fa-solid fa-laptop"></i>Technology Management</a>
+          </li>
+          <li>
+            <a href="AddAssociates.html"><i class="fa-solid fa-users"></i>Associate Management</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i>Reports</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xl-10 col-lg-10" style="padding: 0px 0px">
+        <!--navbar-->
+        <nav class="navbar navbar-light bg-light" style="height: 60px;padding: 8px 16px;">
+          <a class="navbar-brand yash-image"><img src="Images/yashlogo.png" alt="yash-logo" /></a>
+
+          <ul class="ul-b">
+            <li>
+              <span class="nameDesign">
+                <span class="headeruserName">Pankaj Sharma</span>
+                <span class="headeruserRole">Role_User</span>
+              </span>
+            </li>
+            <li>
+              <img class="img-role" src="Images/user.png" />
+            </li>
+          </ul>
+        </nav>
+
+        <!--title-->
+        <div class="container-fluid " style="background-color:#ecf0f5">
+          <div class="row back">
+            <div class="dash-row col">
+              <h5 class=" mt-3" style="color: #144358;font-size:x-large; font-weight: bold;">Associate Management</h5>
+            </div>
+          </div>
+          <!--list title-->
+          <div class="row back">
+            <div class="col" style="padding-top: 15px;">
+              <h4 style="font-size: 20px; color:#144358">List Of Associate</h4>
+        
+            </div>
+            <div class="col pt-2" style="padding-left: 380px;"><input class="form-control input1" type="search" placeholder="Free text search"
+                style="width: auto; display: inline-block;border-radius: 15px;" />
+                <button class="btn btn-default"
+                style="background-color: #144358; margin-left: 5px; color: white;"
+                id="advanced-search-button" type="button">
+                <i class="fa fa-search"></i>
+            </button>
+                <button class="btn-filter"> <svg xmlns="http://www.w3.org/2000/svg"
+                  width="25" height="25" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                  <path
+                    d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                </svg></button></div>
+          </div>
+          <!--table-->
+          <table class="table table-bordered " style="background-color: white;">
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Associate Name</th>
+                <th scope="col">Technology Name</th>
+
+                <th scope="col">Email Address</th>
+                <th scope="col">Action</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th style="width:10%" scope="row">1</th>
+                <td>Associate 1</td>
+                <td>Java</td>
+
+                <td>@yash.com</td>
+                <td style="width:10%"><i class="fa fa-edit" style="color:#144358"></i>
+                  <i class="fa fa-trash-can" style="color:#144358"></i>
+                </td>
+
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Associate 2</td>
+                <td>Java</td>
+
+                <td>@yash.com</td>
+                <td style="width:10%"><i class="fa fa-edit" style="color:#144358"></i>
+                  <i class="fa fa-trash-can" style="color:#144358"></i>
+                </td>
+
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Associate 3</td>
+                <td>Java</td>
+
+                <td>@yash.com</td>
+                <td style="width:10%"><i class="fa fa-edit" style="color:#144358"></i>
+                  <i class="fa fa-trash-can" style="color:#144358"></i>
+                </td>
+
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Associate 4</td>
+                <td>Java</td>
+
+                <td>@yash.com</td>
+                <td style="width:10%"><i class="fa fa-edit" style="color:#144358"></i>
+                  <i class="fa fa-trash-can" style="color:#144358"></i>
+                </td>
+
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Associate 5</td>
+                <td>Java</td>
+
+                <td>@yash.com</td>
+                <td style="width:10%"><i class="fa fa-edit" style="color:#144358"></i>
+                  <i class="fa fa-trash-can" style="color:#144358"></i>
+                </td>
+
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Associate 6</td>
+                <td>Java</td>
+
+                <td>@yash.com</td>
+                <td style="width:10%"><i class="fa fa-edit" style="color:#144358"></i>
+                  <i class="fa fa-trash-can" style="color:#144358"></i>
+                </td>
+
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Associate 7</td>
+                <td>Java</td>
+
+                <td>@yash.com</td>
+                <td style="width:10%"><i class="fa fa-edit" style="color:#144358"></i>
+                  <i class="fa fa-trash-can" style="color:#144358"></i>
+                </td>
+
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td>Associate 8</td>
+                <td>Java</td>
+
+                <td>@yash.com</td>
+                <td style="width:10%"><i class="fa fa-edit" style="color:#144358"></i>
+                  <i class="fa fa-trash-can" style="color:#144358"></i>
+                </td>
+
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td>Associate 9</td>
+                <td>Java</td>
+
+                <td>@yash.com</td>
+                <td style="width:10%"><i class="fa fa-edit" style="color:#144358"></i>
+                  <i class="fa fa-trash-can" style="color:#144358"></i>
+                </td>
+
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td>Associate 10</td>
+                <td>Java</td>
+
+                <td>@yash.com</td>
+                <td style="width:10%"><i class="fa fa-edit" style="color:#144358"></i>
+                  <i class="fa fa-trash-can" style="color:#144358"></i>
+                </td>
+
+              </tr>
+
+            </tbody>
+          </table>
+          <!--pagination-->
+          <div class="row justify-content-center">
+            <div class="col-3">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!--footer-->
+          <div class="row justify-content-center footer1">
+
+            <div class="col-6">
+              <p>Copyright 2022-2023 YOTA App Pvt.Ltd. All right reserved.</p>
+
+            </div>
+          </div>
+        </div>
+</body>
+
+</html>
