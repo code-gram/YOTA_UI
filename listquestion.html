@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questions List</title>
+  <link rel="stylesheet" type="text/css" href="question-liststyle.css" />
+  <!-- #### -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- #### -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+
+  <!-- modal script for Add Questions -->
+  <script>
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+  </script>
+
+  <!-- script for Add Questions -->
+  <script>
+    function myfunction() {
+      var x = document.getElementById('selection').value;
+
+      if (x == 'mcq') {
+        window.open("addquestions.html");
+      }
+      else
+        window.open("truefalsetype.html");
+    }
+  </script>
+  </script>
+
+  <!-- script for update window -->
+  <script>
+    function edit() {
+      window.open("updatequestion.html");
+    }
+  </script>
+
+
+</head>
+
+<body>
+
+  <!-- side navigation bar -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-2 col-lg-2 sam" style="padding: 0px 0px; background-color: #144358">
+        <div class="container header-left" style="height: 60px">
+          <div class="row row-head">
+            <p style="padding-left: 10px">YOTA App</p>
+            <i class="fa-solid fa-bars icon-head"></i>
+          </div>
+        </div>
+
+        <ul class="menu-container">
+          <li>
+            <a href="index.html"><i class="fa-solid fa-gauge-high"></i>Dashboard</a>
+          </li>
+          <li>
+            <a href="createbatch.html" style="font-size: 12px"><i class="fa-solid fa-laptop"></i>Batch Management</a>
+          </li>
+
+          <!-- Quetion Management droup down-->
+          <li class="btn-group dropright">
+            <span onmouseover="this.style.backgroundColor='#88b4ba'" onmouseleave="this.style.backgroundColor='#144358'"
+              type="dropdown" class="btn btn-primary dropdown-toggle"
+              style="background-color: #144358; margin-left: -9%; font-size: 13px; border: none;" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"><i class="fa-sharp fa-solid fa-file-circle-question"></i>
+              Question Management
+            </span>
+            <div class="dropdown-menu"
+              style="background-color: #88b4ba; height: 1000%; margin-top:0%; margin-top: -55%; width: 95%; margin-left: 14px;">
+              <!-- Dropdown menu links -->
+
+              <a class="dropdown-item" href="addquestions.html" style="color: white; background: #88b4ba;">Create
+                Question</a>
+              <br>
+              <a class="dropdown-item" href="listquestion.html" style="color: white; background: #88b4ba;">Questions
+                List</a>
+            </div>
+          </li>
+          <!-- Quetion Management droup down end -->
+
+          <li>
+            <a href="AddTechnology.html" style="font-size: 12px"><i class="fa-solid fa-laptop"></i>Technology Management</a>
+          </li>
+          <li>
+            <a href="AddAssociates.html"><i class="fa-solid fa-users"></i>Associate Management</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i>Reports</a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="col-xl-10 col-lg-10" style="padding: 0px 0px">
+
+        <!--navbar-->
+        <nav class="navbar navbar-light bg-light" style="height: 60px">
+          <a class="navbar-brand yash-image"><img src="Images\yashlogo.png" alt="yash-logo" /></a>
+
+          <ul class="ul-b">
+            <li>
+              <span class="nameDesign">
+                <span class="headeruserName">Pankaj Sharma</span>
+                <span class="headeruserRole">Role_User</span>
+              </span>
+            </li>
+            <li>
+              <img class="img-role" src="Images/user.png" />
+            </li>
+          </ul>
+        </nav>
+
+        <!--dashbord-->
+        <div class="container-fluid">
+          <div class="row back">
+            <div class="dash-row col">
+              <h4 class="dashboard" style="color: #144358"><b>Question Management</b></h4>
+            </div>
+          </div>
+
+        </div>
+
+        <!--Question List card-->
+        <div class="container-fluid">
+          <div class="row justify-content-around back card-row1">
+            <div class="col-lg-11">
+              <div class="card w-100">
+                <div class="card-body box-title">
+                  <div class="row">
+                    <h5 class="card-title col-6"><b>Question List</b></h5>
+                    <div class="col-3">
+
+
+
+
+
+                      <!-- search button -->
+                      <input type="search" placeholder="Search" id="form1" class="form-control" />
+                      <button type="button" style="background-color: #144358; margin-top: -30%; margin-left: 100%;"
+                        class="btn btn-primary"><i class="fas fa-search"></i>
+                      </button>
+
+                      <!-- Button trigger modal -->
+                      <button type="button"
+                        style="right: 0%; margin-left: 130%; margin-top: -55%; background-color: #144358; border-radius: 15px;"
+                        class="btn btn-primary btn btn-info button2" data-toggle="modal" data-target="#exampleModal">
+                        Add Question
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Create Question Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Select</h5>
+                          <br>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <label for="type"><b>Question Type</b></label>
+                          <select class="form-control" style="height: 30px;" id="selection">
+                            <option>mcq</option>
+                            <option>true/false</option>
+                            <option>single choice</option>
+                          </select>
+                        </div>
+
+                        <div class="modal-body">
+                          <label for="level"><b>Question Level</b></label>
+                          <select class="form-control" style="height: 30px;" id="sel1">
+                            <option>easy</option>
+                            <option>medium</option>
+                            <option>hard</option>
+                          </select>
+                        </div>
+
+                        <!-- Create Question button -->
+                        <div class="modal-footer">
+                          <input type="button" style="border-radius: 15px;" class="btn btn-default" data-dismiss="modal"
+                            value="Cancel">
+                          <button onclick="myfunction()" type="button"
+                            style="background-color: #144358; border-radius: 15px;" class="btn btn-primary">Create
+                            Question</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr style="margin-top: -25px;" />
+                  <div>
+                    <ul class="ul-card">
+
+                      <!-- Table columns Names -->
+                      <table class="table table-striped table-hover">
+                        <thead>
+                          <tr>
+
+                            <th>Question Type</th>
+                            <th>Question Level</th>
+                            <th>Question</th>
+                            <th>Correct Answer</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>mcq</td>
+                            <td>easy</td>
+                            <td>What is Java</td>
+                            <td>programming language</td>
+                            <td>
+                              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                  data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                  class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+                          </tr>
+                          <tr>
+
+                            <td>true/false</td>
+                            <td>easy</td>
+                            <td>HTML is scripting language</td>
+                            <td>false</td>
+                            <td>
+                              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                  data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                  class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+                          </tr>
+                          <tr>
+
+                            <td>mcq</td>
+                            <td>medium</td>
+                            <td>JS stands for</td>
+                            <td>java script</td>
+                            <td>
+                              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                  data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                  class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+                          </tr>
+
+                          <tr>
+
+                            <td>mcq</td>
+                            <td>hard</td>
+                            <td>collection is</td>
+                            <td>a group of objects</td>
+                            <td>
+                              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                  data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                  class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+                          </tr>
+                          <tr>
+
+                            <td>mcq</td>
+                            <td>meduim</td>
+                            <td>what is html</td>
+                            <td>hyper text markup language</td>
+                            <td>
+                              <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
+                                  data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                              <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                  class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <!-- pagination content -->
+                      <div class="clearfix">
+
+                        <ul class="pagination">
+                          <li class="page-item disabled"><a href="#">Previous</a></li>
+                          <li class="page-item"><a href="#" class="page-link">1</a></li>
+                          <li class="page-item"><a href="#" class="page-link">2</a></li>
+                          <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                          <li class="page-item"><a href="#" class="page-link">4</a></li>
+                          <li class="page-item"><a href="#" class="page-link">5</a></li>
+                          <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                        </ul>
+                      </div>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--footer-->
+          <footer class="bg-light text-center text-lg-start">
+            <div class="row justify-content-center text-center p-3"
+              style="background-color: rgba(204, 204, 204, 0.53); padding: 20px 0px; text-align: center;">
+              Yash Technologies Powered YOTA &copy; 2023..
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Modal HTML -->
+    <div id="editEmployeeModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h4 class="modal-title">Edit Question</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label>Question</label>
+                <input type="text" placeholder="What is Java" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="email"><b>Question Type</b></label>
+                <select class="form-control" style="height: 10%;" id="selection">
+                  <option>mcq</option>
+                  <option>true/false</option>
+                  <option>single choice</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="email"><b>Question Level</b></label>
+                <select class="form-control" style="height: 10%;" id="selection">
+                  <option>easy</option>
+                  <option>medium</option>
+                  <option>hard</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Correct Answer</label>
+                <input type="text" placeholder="programming language" class="form-control" required>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <input type="button" style="border-radius: 15px;" class="btn btn-default" data-dismiss="modal"
+                value="Cancel">
+              <input type="submit" style="background-color: #144358; border-radius: 15px;" class="btn btn-info"
+                value="Save">
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Delete Modal HTML -->
+    <div id="deleteEmployeeModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h4 class="modal-title">Delete Question</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to delete these Records?</p>
+              <p class="text-warning"><small style="color: #144358;">This action cannot be undone.</small></p>
+            </div>
+            <div class="modal-footer">
+              <input type="button" style="border-radius: 15px;" class="btn btn-default" data-dismiss="modal"
+                value="Cancel">
+              <input type="submit" style="border-radius: 15px;" class="btn btn-danger" value="Delete">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>
